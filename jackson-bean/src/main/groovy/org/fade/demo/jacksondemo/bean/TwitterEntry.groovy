@@ -1,8 +1,10 @@
 package org.fade.demo.jacksondemo.bean
 
+import com.fasterxml.jackson.annotation.JsonRootName
 import groovy.transform.ToString
 
 @ToString
+@JsonRootName("value")
 class TwitterEntry {
 
     /**
@@ -29,5 +31,7 @@ class TwitterEntry {
      * 语言类型
      */
     String languageCode
+
+    Map<String, Object> map
 
 }
